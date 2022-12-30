@@ -1,0 +1,11 @@
+:root { 
+    font-size: 16px;
+}
+
+h1 { 
+    font-size: 2rem;
+}
+
+p { 
+    max-width: 75ch;
+}
