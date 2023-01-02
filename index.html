@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css" type="text/css">
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script defer src="script.js"></script>
     <title>Liam Bowie - Front End Web Dev</title>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav class="grid-left-sidebar">
+            <p class="logo">Liam Bowie</p>
+            <ul class="flex-spaced-around">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -20,52 +22,59 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <h1>Liam Bowie</h1>
-            <h2>Front end web developer</h2>
-            <img src="./img/profile.jpg" alt="" style="border-radius: 10%; height: 200px">
+        <section class="hero grid-center">
+            <div>
+                <h1>Liam Bowie</h1>
+                <h2>Front end web developer</h2>
+            </div>
         </section>
 
-        <section id="about">
-            <fieldset>
-                <legend>Adjust bio length</legend>
-                <div id="bio-radio-group">
-                    <div class="bio-option">
-                        <input type="radio" name="bio-length" id="shortest" value="0" checked="true">
-                        <label for="shortest">shortest</label>
-                    </div>
-                    <div class="bio-option">
-                        <input type="radio" name="bio-length" id="shorter" value="1">
-                        <label for="shorter">shorter</label>
-                    </div>
-                    <div class="bio-option">
-                        <input type="radio" name="bio-length" id="short" value="2">
-                        <label for="short">short</label>
-                    </div>
-                    <div class="bio-option">
-                        <input type="radio" name="bio-length" id="long" value="3">
-                        <label for="long">long</label>
-                    </div>
-                    <div class="bio-option">
-                        <input type="radio" name="bio-length" id="longer" value="4">
-                        <label for="longer">longer</label>
-                    </div>
-                    <div class="bio-option">
-                        <input type="radio" name="bio-length" id="longest" value="5">
-                        <label for="longest">longest</label>
-                    </div>
+        <section id="about" class="grid-bio block">
+                <div>
+                    <form class="bio-length-options">
+                        <fieldset>
+                            <legend>Adjust bio length</legend>
+                            <div id="bio-radio-group" class="grid-6-columns bio-option-radios">
+                                <div class="bio-option">
+                                    <input type="radio" name="bio-length" id="shortest" value="0" checked="true">
+                                    <label for="shortest" style="display: none">shortest</label>
+                                </div>
+                                <div class="bio-option">
+                                    <input type="radio" name="bio-length" id="shorter" value="1">
+                                    <label for="shorter" style="display: none">shorter</label>
+                                </div>
+                                <div class="bio-option">
+                                    <input type="radio" name="bio-length" id="short" value="2">
+                                    <label for="short" style="display: none">short</label>
+                                </div>
+                                <div class="bio-option">
+                                    <input type="radio" name="bio-length" id="long" value="3">
+                                    <label for="long" style="display: none">long</label>
+                                </div>
+                                <div class="bio-option">
+                                    <input type="radio" name="bio-length" id="longer" value="4">
+                                    <label for="longer" style="display: none">longer</label>
+                                </div>
+                                <div class="bio-option">
+                                    <input type="radio" name="bio-length" id="longest" value="5">
+                                    <label for="longest" style="display: none">longest</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <p><strong>Liam Bowie</strong> <span id="bio-text">wants to build cool things.</span></p>
                 </div>
-                <p><strong>Liam Bowie</strong> <span id="bio-text">wants to build cool things.</span></p>
-            </fieldset>
+            <img src="./img/profile.jpg" alt="" style="border-radius: 10%; width: 400px">
+
         </section>
 
         <section id="skills">
             <div class="grid-two-columns">
-                <div>
+                <div class="skills-text">
                     <h2>Skills</h2>
                     <p>Placeholder: Description of displayed skills</p>
                 </div>
-                <div id="web-fundamentals" class="container">
+                <div id="web-fundamentals" class="container skills-images">
                     <figure>
                         <img src="./img/html5.svg" alt="HTML5 icon" aria-label="HTML5" style="width: 100px">
                         <figcaption>HTML5</figcaption>
@@ -79,7 +88,7 @@
                         <figcaption>JS</figcaption>
                     </figure>
                 </div>
-                <div id="web-frameworks" class="container">
+                <div id="web-frameworks" class="container skills-images">
                     <figure>
                         <img src="./img/react.svg" alt="ReactJS logo" aria-label="React JS" style="width: 100px">
                         <figcaption>React</figcaption>
@@ -89,7 +98,7 @@
                         <figcaption>Redux</figcaption>
                     </figure>
                 </div>
-                <div id="testing" class="container">
+                <div id="testing" class="container skills-images">
                     <figure>
                         <img src="./img/mocha.svg" alt="Mocha JS logo" aria-label="Mocha JS testing framework" style="width: 100px">
                         <figcaption>Mocha</figcaption>
@@ -99,7 +108,7 @@
                         <figcaption>Jest</figcaption>
                     </figure>
                 </div>
-                <div id="version-control" class="container">
+                <div id="version-control" class="container skills-images">
                     <figure>
                         <img src="./img/git-bash.svg" alt="Git Bash logo" aria-label="git bash version control" style="width: 100px">
                         <figcaption>Git Bash</figcaption>
@@ -109,48 +118,46 @@
                         <figcaption>GitHub</figcaption>
                     </figure>
                 </div>
-                <div id="Other languages" class="container">
+                <div id="Other languages" class="container skills-images">
                     <figure>
                         <img src="./img/python.svg" alt="Python icon" aria-label="python programming language" style="width: 100px">
-                        <figcaption>JS</figcaption>
+                        <figcaption>Python</figcaption>
                     </figure>
                 </div>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Projects I'm working on</h2>
-            <div class="card container">
-                <img src="./img/dnd.png" alt="Git Bash logo" aria-label="git bash version control" style="width: 100px">
-                <div class="container">
-                    <h3 class="project-title">DnD DM Dashboard</h4>
-                    <p class="project-description">A Dungeons and Dragons Dungeon Master dashboard that allows DMs to see player stats at a glance and allows DMs and players to update stats in realtime.</p>
-                    <div class="container">
-                        <h4>Skills:</h4>
-                        <img src="./img/react.svg" alt="ReactJS logo" aria-label="React JS" style="width: 50px">
-                        <img src="./img/jest.svg" alt="Jest JS logo" aria-label="Jest JS testing framework" style="width: 50px">
+            <h2 style="text-align: center">Projects I'm working on</h2>
+            <div class="carousel">
+                <div class="card container">
+                    <div class="info">
+                        <h3 class="project-title">DnD DM Dashboard</h4>
+                        <p class="project-description">A Dungeons and Dragons Dungeon Master dashboard that allows DMs to see player stats at a glance and allows DMs and players to update stats in realtime.</p>
+                        <div class="project-skills">
+                            <h4>Skills:</h4>
+                            <img src="./img/react.svg" alt="ReactJS logo" aria-label="React JS">
+                            <img src="./img/jest.svg" alt="Jest JS logo" aria-label="Jest JS testing framework">
+                        </div>
                     </div>
+                    <img src="./img/dnd.png" alt="Git Bash logo" aria-label="git bash version control" style="width: 100px">
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="block">
             <h2>Contact me</h2>
             <form action="">
-                <div class="container">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" id="name">
-                </div>
-                <div class="container">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input type="text" id="subject">
-                </div>
-                <div class="container">
-                    <label for="message" class="form-label">Message</label>
-                    <input type="textarea" id="message">
-                </div>
-                <div class="container">
-                    <input type="submit" value="Submit">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name">
+
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject">
+
+                <label for="message" class="form-label">Message</label>
+                <textarea type="textarea" id="message" ></textarea>
+
+                <input type="submit" value="Submit">
                 </div>
             </form>
         </section>
