@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="large-screen-nav">
             <ul class="flex-spaced-around">
                 <li><a href="#home" class="nav-button">Liam Bowie</a></li>
                 <li><a href="#about" class="nav-button">About</a></li>
@@ -22,6 +22,19 @@
                 <li><a href="#projects" class="nav-button">Projects</a></li>
                 <li><a href="#contact" class="nav-button">Contact</a></li>
             </ul>
+        </nav>
+        <nav class="small-screen-nav">
+            <h4><a href="#home">Liam Bowie</a></h4>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <ul class="">
+                <li><a href="#about" class="nav-button">About</a></li>
+                <li><a href="#skills" class="nav-button">Skills</a></li>
+                <li><a href="#projects" class="nav-button">Projects</a></li>
+                <li><a href="#contact" class="nav-button">Contact</a></li>
+            </ul>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
         </nav>
     </header>
     <main>
