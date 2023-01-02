@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,400;0,600;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css" type="text/css">
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script defer src="script.js"></script>
@@ -29,7 +32,8 @@
             </div>
         </section>
 
-        <section id="about" class="grid-bio block">
+        <section id="about" class="grid-bio block-center">
+            <img src="./img/profile.jpg" alt="Liam Bowie smiling" class="profile-photo">
                 <div>
                     <form class="bio-length-options">
                         <fieldset>
@@ -64,63 +68,61 @@
                     </form>
                     <p><strong>Liam Bowie</strong> <span id="bio-text">wants to build cool things.</span></p>
                 </div>
-            <img src="./img/profile.jpg" alt="" style="border-radius: 10%; width: 400px">
-
         </section>
 
         <section id="skills">
-            <div class="grid-two-columns">
+            <div class="grid-2-columns">
                 <div class="skills-text">
-                    <h2>Skills</h2>
+                    <h3>Skills</h3>
                     <p>Placeholder: Description of displayed skills</p>
                 </div>
-                <div id="web-fundamentals" class="container skills-images">
+                <div id="web-fundamentals" class="skills-images flex-spaced-evenly">
                     <figure>
-                        <img src="./img/html5.svg" alt="HTML5 icon" aria-label="HTML5" style="width: 100px">
+                        <img src="./img/html5.svg" alt="HTML5 icon" aria-label="HTML5">
                         <figcaption>HTML5</figcaption>
                     </figure>
                     <figure>
-                        <img src="./img/css3.svg" alt="CSS3 icon" aria-label="CSS3" style="width: 100px">
+                        <img src="./img/css3.svg" alt="CSS3 icon" aria-label="CSS3">
                         <figcaption>CSS3</figcaption>
                     </figure>
                     <figure>
-                        <img src="./img/javascript.svg" alt="JavaScript icon" aria-label="JavaSCript" style="width: 100px">
+                        <img src="./img/javascript.svg" alt="JavaScript icon" aria-label="JavaSCript">
                         <figcaption>JS</figcaption>
                     </figure>
                 </div>
-                <div id="web-frameworks" class="container skills-images">
+                <div id="web-frameworks" class="skills-images  flex-spaced-evenly">
                     <figure>
-                        <img src="./img/react.svg" alt="ReactJS logo" aria-label="React JS" style="width: 100px">
+                        <img src="./img/react.svg" alt="ReactJS logo" aria-label="React JS">
                         <figcaption>React</figcaption>
                     </figure>
                     <figure>
-                        <img src="./img/redux.svg" alt="Redux logo" aria-label="Redux JS" style="width: 100px">
+                        <img src="./img/redux.svg" alt="Redux logo" aria-label="Redux JS">
                         <figcaption>Redux</figcaption>
                     </figure>
                 </div>
-                <div id="testing" class="container skills-images">
+                <div id="testing" class="skills-images flex-spaced-evenly">
                     <figure>
-                        <img src="./img/mocha.svg" alt="Mocha JS logo" aria-label="Mocha JS testing framework" style="width: 100px">
+                        <img src="./img/mocha.svg" alt="Mocha JS logo" aria-label="Mocha JS testing framework">
                         <figcaption>Mocha</figcaption>
                     </figure>
                     <figure>
-                        <img src="./img/jest.svg" alt="Jest JS logo" aria-label="Jest JS testing framework" style="width: 100px">
+                        <img src="./img/jest.svg" alt="Jest JS logo" aria-label="Jest JS testing framework">
                         <figcaption>Jest</figcaption>
                     </figure>
                 </div>
-                <div id="version-control" class="container skills-images">
+                <div id="version-control" class="skills-images flex-spaced-evenly">
                     <figure>
-                        <img src="./img/git-bash.svg" alt="Git Bash logo" aria-label="git bash version control" style="width: 100px">
+                        <img src="./img/git-bash.svg" alt="Git Bash logo" aria-label="git bash version control">
                         <figcaption>Git Bash</figcaption>
                     </figure>
                     <figure>
-                        <a href="https://github.com/LiamBowie"><img src="./img/github.svg" alt="GitHub logo" aria-label="GitHub link" style="width: 100px"></a>
+                        <a href="https://github.com/LiamBowie"><img src="./img/github.svg" alt="GitHub logo" aria-label="GitHub link"></a>
                         <figcaption>GitHub</figcaption>
                     </figure>
                 </div>
-                <div id="Other languages" class="container skills-images">
+                <div id="Other languages" class="skills-images flex-spaced-evenly">
                     <figure>
-                        <img src="./img/python.svg" alt="Python icon" aria-label="python programming language" style="width: 100px">
+                        <img src="./img/python.svg" alt="Python icon" aria-label="python programming language">
                         <figcaption>Python</figcaption>
                     </figure>
                 </div>
@@ -128,14 +130,14 @@
         </section>
 
         <section id="projects">
-            <h2 style="text-align: center">Projects I'm working on</h2>
+            <h3 style="text-align: center">Projects I'm working on</h3>
             <div class="carousel">
-                <div class="card container">
+                <div class="card">
                     <div class="info">
-                        <h3 class="project-title">DnD DM Dashboard</h4>
+                        <h4 class="project-title">DnD DM Dashboard</h4>
                         <p class="project-description">A Dungeons and Dragons Dungeon Master dashboard that allows DMs to see player stats at a glance and allows DMs and players to update stats in realtime.</p>
                         <div class="project-skills">
-                            <h4>Skills:</h4>
+                            <p>Skills:</p>
                             <img src="./img/react.svg" alt="ReactJS logo" aria-label="React JS">
                             <img src="./img/jest.svg" alt="Jest JS logo" aria-label="Jest JS testing framework">
                         </div>
@@ -145,8 +147,8 @@
             </div>
         </section>
 
-        <section id="contact" class="block">
-            <h2>Contact me</h2>
+        <section id="contact" class="block-center">
+            <h3>Contact me</h3>
             <form action="">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" id="name">

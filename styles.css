@@ -1,13 +1,43 @@
 :root { 
     font-size: 16px;
+
+    --ff-body: 'Poppins', sans-serif;
+    --ff-header: 'Abril Fatface', cursive;
+
+    --fs-xl: clamp(3.5rem, 12vw + 1rem, 12rem);
+    --fs-l: clamp(1rem, 3vw + 1rem, 3rem);
+    --fs-600: 2.25rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1rem
 }
 
 body { 
     width: 100%;
 }
 
-p { 
-    max-width: 75ch;
+h1 { 
+    font-family: var(--ff-header);
+    font-size: var(--fs-xl);
+}
+
+h2 { 
+    font-family: var(--ff-body);
+    font-size: var(--fs-l)
+}
+
+h3 { 
+    font-family: var(--ff-header);
+    font-size: var(--fs-600);
+}
+
+h4 { 
+    font-family: var(--ff-body);
+    font-size: var(--fs-500);
+}
+
+label, input, p { 
+    font-family: var(--ff-body);
+    max-width: clamp(45ch, 50%, 75ch);
     line-height: 1.4;
 }
 
@@ -22,7 +52,7 @@ section {
 
 fieldset { 
     max-width: 300px;
-    margin: 3rem auto;
+    margin-bottom: 2rem;
 }
 
 figcaption { 
@@ -44,8 +74,8 @@ figcaption {
 }
 
 .grid-bio { 
-    grid-template-columns: 1fr 400px;
-    gap: 6rem;
+    grid-template-columns: minmax(200px, 400px) 1fr;
+    gap: 5rem;
 }
 
 .grid-6-columns { 
@@ -55,6 +85,7 @@ figcaption {
 
 .grid-2-columns { 
     grid-template-columns: 1fr 1fr;
+    gap: 3rem;
 }
 
 .grid-center { 
@@ -66,6 +97,12 @@ figcaption {
 .flex-spaced-around { 
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+}
+
+.flex-spaced-evenly { 
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -82,7 +119,7 @@ figcaption {
     text-align: center;
 }
 
-.block { 
+.block-center { 
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -95,21 +132,30 @@ figcaption {
     margin-top: 1rem;
 }
 
+.profile-photo { 
+    width:100%;
+    border-radius: 10%;
+}
+
 .skills-text { 
     position: sticky;
     top: 40%;
-    margin: 0 auto;
+    margin: 0 auto 47.5vh;
     height: fit-content;
 }
 
 .skills-images { 
     grid-column-start: 2;
     height: 100vh;
-    display: flex;
+    gap: 2rem
 }
 
 .skills-images figure { 
-    margin: auto;
+    height: auto;
+}
+
+.skills-images figure img { 
+    width: clamp(10px, 12vw, 125px);
 }
 
 .carousel { 
@@ -122,7 +168,7 @@ figcaption {
     background-size: cover;
     background-position: right;
     overflow: hidden;
-    width: 500px;
+    width: 300px;
     max-height: 500px;
     border-radius: 1rem;
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
@@ -168,6 +214,7 @@ figcaption {
 .project-title {
     margin: 0;
     padding: 24px;
+    min-height: 3rem;
     line-height: 1;
     color: rgba(0, 0, 0, 0.87);
 }
@@ -182,6 +229,7 @@ figcaption {
     display: flex;
     gap: 1rem;
     align-items: center;
+    padding: 0 24px 24px;
 }
 
 .project-skills img { 
@@ -206,4 +254,32 @@ textarea {
 
 input[type=submit] { 
     float: right;
+}
+
+@media only screen and (max-width: 585px) { 
+    section { 
+        padding: 5rem 3vw;
+    }
+
+    fieldset {
+        margin: 0 auto 2rem;
+    }
+
+    .grid-bio {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-photo {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .skills-text { 
+        text-align: center;
+    }
+
+    .skills-images figure img { 
+        /* width: 50px; */
+    }
 }
