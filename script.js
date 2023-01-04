@@ -9,16 +9,18 @@ const bioText = [
     'is a highly skilled and multifaceted individual with a passion for both computer science and music. With a first class honours degree in each subject, Liam is a lifelong learner with a love for solving puzzles and developing new skills. Currently, Liam is focusing on becoming a front end web developer, with aspirations to eventually become a full stack engineer. Liam is driven by a desire to build cool and innovative things using his web development skills. In his spare time, Liam enjoys riding motorcycles, performing as a professional musician, and practising his skills as an amateur pianist and singer. Liam is also a fan of fantasy literature and enjoys playing Dungeons and Dragons with friends. With a diverse range of interests and a strong foundation in both computer science and music education, Liam is a well-rounded and highly skilled individual with a bright future ahead.'
 ];
 
-for( let i = 0; i < bioLength.length; i++) { 
+for( let i = 0; i < bioLength.length; i++ ) { 
     bioLength[i].addEventListener('change', () => {
         bio.innerHTML = bioText[bioLength[i].value];
     });
 }
 
+sk = document.getElementById('skills-description')
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) { 
             entry.target.classList.add('show');
+            sk.innerHTML = entry.target.parentElement.id;
         } 
         else { 
             entry.target.classList.remove('show');

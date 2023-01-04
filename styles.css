@@ -44,10 +44,13 @@ h4 {
     font-size: var(--fs-500);
 }
 
-figcaption, label, input, p { 
+p { 
+    max-width: clamp(45ch, 100%, 75ch);
+}
+
+figcaption, label, textarea, input, p { 
     font-family: var(--ff-body);
     font-size: var(--fs-400);
-    max-width: clamp(45ch, 50%, 75ch);
     line-height: 1.4;
 }
 
@@ -254,18 +257,38 @@ figcaption {
 .skills-text { 
     position: sticky;
     top: 40%;
-    margin: 0 auto 47.5vh;
     height: fit-content;
+    text-align: center;
+}
+
+.skills-text p { 
+    max-width: none;
 }
 
 .skills-images { 
     grid-column-start: 2;
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(10px, 70px));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 150px));
     height: 100vh;
-    gap: 6rem
+    gap: 10vw;
 }
+
+.skills-images figure img { 
+    width: clamp(75px, 10vw, 150px);
+}
+.skills-images figure figcaption { 
+    opacity: 0;
+    transform: translateY(-2rem);
+    transition: all 200ms;
+}
+
+.skills-images figure:hover figcaption { 
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 
 .hidden {
     opacity: 0;
@@ -281,7 +304,8 @@ figcaption {
 }
 
 .icon { 
-    margin: 0 auto;
+    text-align: center;
+    width: 100%;
 }
 
 .icon:nth-child(2) {
@@ -293,6 +317,7 @@ figcaption {
 }
 
 .icon a img { 
+    margin: 0 auto;
     animation: shake 11s ease-in 1s infinite;
 }
 
@@ -309,21 +334,6 @@ figcaption {
     7%, 10% {
         transform: translate(0);
     }
-}
-
-.skills-images figure figcaption { 
-    opacity: 0;
-    transform: translateY(-2rem);
-    transition: all 200ms;
-}
-
-.skills-images figure:hover figcaption { 
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.skills-images figure img { 
-    width: clamp(10px, 12vw, 70px);
 }
 
 .carousel { 
