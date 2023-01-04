@@ -1,3 +1,16 @@
+const rainbowLetters = document.querySelectorAll('.rainbow-letter');
+
+rainbowLetters.forEach(letter => {
+    letter.addEventListener('animationend', () => {
+        letter.classList.remove('animate');
+    });
+    letter.addEventListener('mouseover', () => {
+        letter.classList.add('animate');
+    });
+});
+
+
+
 const bio = document.getElementById('bio-text');
 const bioLength = document.getElementsByName('bio-length')
 const bioText = [
