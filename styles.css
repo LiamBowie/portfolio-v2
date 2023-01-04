@@ -20,7 +20,7 @@ html {
 
 body { 
     max-width: 100%;
-    overflow-x: hidden;
+
 }
 
 h1 { 
@@ -37,6 +37,7 @@ h2 {
 h3 { 
     font-family: var(--ff-header);
     font-size: var(--fs-600);
+    margin-bottom: 1rem;
 }
 
 h4 { 
@@ -61,6 +62,7 @@ figcaption, label, textarea, input, p {
 nav { 
     position: fixed;
     width: 100%;
+    padding: 0;
     background-color: var(--clr-secondary);
     box-shadow: 0 2px 15px var(--clr-primary);
     z-index: 2;
@@ -152,8 +154,7 @@ figcaption {
 }
 
 .grid-2-columns { 
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 400px 1fr;
 }
 
 .grid-center { 
@@ -183,6 +184,8 @@ figcaption {
 }
 
 .hero { 
+    padding-left: 0;
+    padding-right: 0;
     height: 50vh;
     text-align: center;
 }
@@ -269,14 +272,16 @@ figcaption {
     grid-column-start: 2;
     display: grid;
     place-content: center;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(50px, 150px));
     height: 100vh;
-    gap: 10vw;
+    gap: 3vw;
 }
 
 .skills-images figure img { 
     width: clamp(75px, 10vw, 150px);
 }
+
 .skills-images figure figcaption { 
     opacity: 0;
     transform: translateY(-2rem);
@@ -287,8 +292,6 @@ figcaption {
     transform: translateY(0);
     opacity: 1;
 }
-
-
 
 .hidden {
     opacity: 0;
@@ -305,7 +308,8 @@ figcaption {
 
 .icon { 
     text-align: center;
-    width: 100%;
+    width: clamp(75px, 7vw, 150px);
+    height: fit-content;
 }
 
 .icon:nth-child(2) {
@@ -434,6 +438,33 @@ input[type=submit] {
     float: right;
 }
 
+@media only screen and (max-width: 810px) {
+
+    /* New layout for bio block and skills section at smaller screens */
+
+    .grid-2-columns { 
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-bio {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-photo {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+
+    .tilt-box-wrap { 
+        display: flex;
+    } 
+
+    /* End of new layout for bio block and skills section at smaller screens */
+
+}
+
 @media only screen and (max-width: 585px) { 
     section { 
         padding: 5rem 3vw;
@@ -526,23 +557,9 @@ input[type=submit] {
         transition: opacity 250ms ease-in-out 300ms;
     }
 
-    .grid-bio {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .profile-photo {
+    .profile-photo { 
         width: 200px;
-        margin: 0 auto;
     }
-
-    /* Recenter profile image for tilt effect */
-
-    .tilt-box-wrap { 
-        display: flex;
-    } 
-
-    /* End of recenter profile image for tilt effect */
 
     .skills-text { 
         text-align: center;
