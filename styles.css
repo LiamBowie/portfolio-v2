@@ -2,7 +2,7 @@
     font-size: 16px;
 
     --ff-body: 'Poppins', sans-serif;
-    --ff-header: 'Abril Fatface', cursive;
+    --ff-header: 'Abril Fatface', 'Times New Roman', Times, serif; 
 
     --fs-xl: clamp(3.5rem, 12vw + 1rem, 12rem);
     --fs-l: clamp(1rem, 3vw + 1rem, 3rem);
@@ -30,7 +30,7 @@ html {
 
 body { 
     max-width: 100%;
-
+    padding-bottom: 5rem;
 }
 
 h1 { 
@@ -59,7 +59,7 @@ p {
     max-width: clamp(45ch, 100%, 75ch);
 }
 
-figcaption, label, textarea, input, p { 
+figcaption, label, textarea, input, legend, p { 
     font-family: var(--ff-body);
     font-size: var(--fs-400);
     line-height: 1.4;
@@ -67,6 +67,20 @@ figcaption, label, textarea, input, p {
 
 input, textarea { 
     margin-bottom: 2rem;
+}
+
+input[type="radio"] {
+    transform: scale(1.2);
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
 }
 
 button { 
@@ -279,6 +293,24 @@ figcaption {
     margin-top: 1rem;
 }
 
+.bio-option {
+    position: relative;
+}
+
+.bio-label {
+    position: absolute;
+    top: 1.5rem;
+    font-style: italic;
+}
+
+.bio-label.shortest { 
+    left: 0;
+}
+
+.bio-label.longest {
+    right: 0;
+}
+
 .profile-photo { 
     width:100%;
     border-radius: 10%;
@@ -294,7 +326,7 @@ figcaption {
 }
 .tilt-box-wrap:hover { 
     transition: all .3s ease-out linear;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 .tilt-box {
     width: 100%;
@@ -321,15 +353,15 @@ figcaption {
 .t_over:nth-child(8) { left: 33.333%; top: 66.666% }
 .t_over:nth-child(9) { left: 66.666%; top: 66.666% }
 
-.t_over:nth-child(1):hover ~ .tilt-box { transform: rotateX(-10deg) rotateY(10deg); }
-.t_over:nth-child(2):hover ~ .tilt-box { transform: rotateX(-10deg) rotateY(0); }
-.t_over:nth-child(3):hover ~ .tilt-box { transform: rotateX(-10deg) rotateY(-10deg); }
-.t_over:nth-child(4):hover ~ .tilt-box { transform: rotateX(0) rotateY(10deg); }
+.t_over:nth-child(1):hover ~ .tilt-box { transform: rotateX(-16deg) rotateY(16deg); }
+.t_over:nth-child(2):hover ~ .tilt-box { transform: rotateX(-16deg) rotateY(0); }
+.t_over:nth-child(3):hover ~ .tilt-box { transform: rotateX(-16deg) rotateY(-16deg); }
+.t_over:nth-child(4):hover ~ .tilt-box { transform: rotateX(0) rotateY(16deg); }
 .t_over:nth-child(5):hover ~ .tilt-box { transform: rotateX(0) rotateY(0); }
-.t_over:nth-child(6):hover ~ .tilt-box { transform: rotateX(0) rotateY(-10deg); }
-.t_over:nth-child(7):hover ~ .tilt-box { transform: rotateX(10deg) rotateY(10deg); }
-.t_over:nth-child(8):hover ~ .tilt-box { transform: rotateX(10deg) rotateY(0); }
-.t_over:nth-child(9):hover ~ .tilt-box { transform: rotateX(10deg) rotateY(-10deg); }
+.t_over:nth-child(6):hover ~ .tilt-box { transform: rotateX(0) rotateY(-16deg); }
+.t_over:nth-child(7):hover ~ .tilt-box { transform: rotateX(16deg) rotateY(16deg); }
+.t_over:nth-child(8):hover ~ .tilt-box { transform: rotateX(16deg) rotateY(0); }
+.t_over:nth-child(9):hover ~ .tilt-box { transform: rotateX(16deg) rotateY(-16deg); }
 
 /* End of tilt effect */
 
