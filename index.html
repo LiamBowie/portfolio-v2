@@ -125,7 +125,7 @@
                         <figcaption>React</figcaption>
                     </figure>
                     <figure class="icon hidden">
-                        <img src="./img/redux.svg" alt="Redux logo" aria-label="Redux JS">
+                        <img src="./img/redux.svg" alt="Redux logo" aria-label="Redux JS" style="margin-top: 10px">
                         <figcaption>Redux</figcaption>
                     </figure>
                 </div>
@@ -177,22 +177,21 @@
 
         <section id="contact" class="block-center">
             <h3>Contact me</h3>
-            <form action="https://formsubmit.co/liambowie16@gmail.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://liambowie.github.io/portfolio-v2/pages/thankyou.html">
+            <form action="https://formsubmit.io/send/f920ad71-d3ec-4186-a719-9247ca81da22" method="POST">
+                <input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5500/pages/thankyou.html">
 
                 <label for="name" class="form-label">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" >
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
 
                 <label for="subject" class="form-label">Email address</label>
-                <input type="text" id="email" name="email" placeholder="Your Email Address" >
-
-                <input type="hidden" name="_subject" value="Email from portfolio site!">
+                <input type="text" id="email" name="email" placeholder="Your Email Address" required>
 
                 <label for="message" class="form-label">Message</label>
-                <textarea type="textarea" id="message" name="message" placeholder="What's up?" ></textarea>
+                <textarea type="textarea" id="message" name="message" placeholder="What's up?" required></textarea>
 
-                <input class="confetti" type="submit" value="Submit">
+                <input name="_formsubmit_id" type="text" style="display:none">
+
+                <input class="button" type="submit" value="Submit">
                 
                 </div>
             </form>

@@ -59,6 +59,30 @@ input, textarea {
     margin-bottom: 2rem;
 }
 
+button { 
+    height: 2rem;
+    padding: 0 15px;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+}
+
+.button { 
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    transition: all 150ms;
+}
+
+.button:hover { 
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+}
+
+.button:active { 
+        background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    transition: all 150ms;
+}
+
 .small-screen-nav { 
     display: none;
 }
@@ -283,7 +307,7 @@ figcaption {
 }
 
 .skills-images figure img { 
-    width: clamp(75px, 10vw, 150px);
+    width: clamp(85px, 10vw, 150px);
 }
 
 .skills-images figure figcaption { 
@@ -311,8 +335,9 @@ figcaption {
 }
 
 .icon { 
+
     text-align: center;
-    width: clamp(75px, 7vw, 150px);
+    width: 100%;
     height: fit-content;
 }
 
