@@ -55,6 +55,10 @@ figcaption, label, textarea, input, p {
     line-height: 1.4;
 }
 
+input, textarea { 
+    margin-bottom: 2rem;
+}
+
 .small-screen-nav { 
     display: none;
 }

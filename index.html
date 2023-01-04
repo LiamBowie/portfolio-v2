@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="reset.css" type="text/css">
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script defer src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
     <title>Liam Bowie - Front End Web Dev</title>
 </head>
 <body>
@@ -100,7 +103,7 @@
             <div class="grid-2-columns">
                 <div class="skills-text">
                     <h3>Skills</h3>
-                    <p id="skills-description">Placeholder: Description of displayed skills</p>
+                    <p id="skills-description"></p>
                 </div>
                 <div id="Web Fundamentals" class="skills-images">
                     <figure class="icon hidden">
@@ -170,22 +173,27 @@
                     </div>
                     <img src="./img/dnd.png" alt="Git Bash logo" aria-label="git bash version control" style="width: 100px">
                 </div>
-            </div>
         </section>
 
         <section id="contact" class="block-center">
             <h3>Contact me</h3>
-            <form action="">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" id="name">
+            <form action="https://formsubmit.co/liambowie16@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://liambowie.github.io/portfolio-v2/pages/thankyou.html">
 
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" id="subject">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" >
+
+                <label for="subject" class="form-label">Email address</label>
+                <input type="text" id="email" name="email" placeholder="Your Email Address" >
+
+                <input type="hidden" name="_subject" value="Email from portfolio site!">
 
                 <label for="message" class="form-label">Message</label>
-                <textarea type="textarea" id="message" ></textarea>
+                <textarea type="textarea" id="message" name="message" placeholder="What's up?" ></textarea>
 
-                <input type="submit" value="Submit">
+                <input class="confetti" type="submit" value="Submit">
+                
                 </div>
             </form>
         </section>
