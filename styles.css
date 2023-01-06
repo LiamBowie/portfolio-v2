@@ -32,6 +32,11 @@ body {
     max-width: 100%;
 }
 
+::selection { 
+    color: var(--clr-secondary);
+    background-color: var(--clr-primary);
+}
+
 body::-webkit-scrollbar { 
     width: .75rem;
 }
