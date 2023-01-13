@@ -38,20 +38,12 @@ body {
 }
 
 body::-webkit-scrollbar { 
-    width: .75rem;
-}
-
-body::-webkit-scrollbar-track { 
-    border-radius: 100vw;
-    margin-top: 50px;
-    margin-bottom: .5em;
+    width: .5rem;
 }
 
 body::-webkit-scrollbar-thumb { 
     background: var(--clr-primary);
-    border-radius: 100vw;
-    transition: all 1s;
-}
+} 
 
 h1 { 
     font-family: var(--ff-header);
@@ -400,6 +392,12 @@ figcaption {
     max-width: none;
 }
 
+.skill-image-container { 
+    display: grid;
+    place-content: center;
+    height: 150px;
+}
+
 .skills-images { 
     grid-column-start: 2;
     display: grid;
@@ -428,7 +426,7 @@ figcaption {
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
+    transform: translateY(50%);
     transition: all 900ms ease-out;
 }
 
