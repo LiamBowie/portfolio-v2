@@ -30,3 +30,12 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+const menu = document.getElementById("nav-toggle");
+const navButton = document.querySelectorAll(".nav-button");
+
+navButton.forEach(button => {
+    button.addEventListener('click', () => {
+        menu.checked = false;
+    });
+});
