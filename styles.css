@@ -79,6 +79,10 @@ p {
     max-width: clamp(45ch, 100%, 75ch);
 }
 
+strong { 
+    font-weight: bold;
+}
+
 figcaption, label, textarea, input, legend, p { 
     font-family: var(--ff-body);
     font-size: var(--fs-400);
